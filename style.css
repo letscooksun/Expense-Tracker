@@ -467,44 +467,71 @@ header {
 }
 
 
+/* Currency Settings */
+
 .currency {
     width: 100%;
     max-width: 800px;
-
     margin: auto;
+    padding: 25px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 20px;
 
-    gap: 30px;
+    background-color: #111;
+    border: 1px solid #444;
+    border-radius: 12px;
 }
 
-.currency input {
-    width: 200px;
-    height: 40px;
+/* Currency Dropdown */
 
-    padding: 0 10px;
+.currency select {
+    width: 300px;
+    height: 45px;
+
+    padding: 0 15px;
 
     border: 1px solid #555;
     border-radius: 10px;
 
     outline: none;
+
+    background-color: #222;
+    color: #f5f5f5;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
 }
 
-.currency input:focus {
-    border-color: #aaa;
+.currency select:focus {
+    border-color: #198754;
 }
+
+/* Dropdown Options */
+
+.currency select option {
+    background-color: #222;
+    color: #f5f5f5;
+}
+
+/* Change Currency Button */
 
 .currency button {
-    width: 70px;
-    height: 40px;
+    min-width: 160px;
+    height: 45px;
 
-    border: 1px solid #555;
+    padding: 0 20px;
+
+    border: none;
     border-radius: 10px;
 
     background-color: #198754;
     color: #fff;
+
+    font-weight: 600;
 
     cursor: pointer;
 
@@ -512,12 +539,12 @@ header {
 }
 
 .currency button:hover {
+    background-color: #157347;
     transform: translateY(-2px);
 }
 
-
-button {
-    transition: 0.2s ease;
+.currency button:active {
+    transform: translateY(0);
 }
 
    /* TABLET */
@@ -648,12 +675,14 @@ button {
     /* Currency */
 
     .currency {
-        flex-direction: column;
-        gap: 15px;
-    }
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 15px;
+}
 
-    .currency input,
-    .currency button {
-        width: 100%;
-    }
+.currency select,
+.currency button {
+    width: 100%;
+    max-width: 100%;
+}
 }

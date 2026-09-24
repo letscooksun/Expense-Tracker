@@ -348,23 +348,36 @@
 
     <section id="settings" class="section">
 
-        <h2 class="section-class">Settings</h2>
+    <h2 class="section-class">Settings</h2>
 
-        <form class="currency">
+    <form class="currency">
 
-            <input
-                type="text"
-                id="add-currency"
-                placeholder="Search Currency"
-            >
+        <label for="add-currency">
+            Select Currency
+        </label>
 
-            <button id="change-currency" type="submit">
-                Change
-            </button>
+        <select id="add-currency">
+
+            <option value="INR">INR - Indian Rupee (₹)</option>
+
+            <option value="USD">USD - US Dollar ($)</option>
+
+            <option value="EUR">EUR - Euro (€)</option>
+
+            <option value="GBP">GBP - British Pound (£)</option>
+
+            <option value="JPY">JPY - Japanese Yen (¥)</option>
+
+        </select>
+
+        <button id="change-currency" type="submit">
+            Change Currency
+        </button>
 
         </form>
 
     </section>
+
 
 
     <!-- JavaScript -->
